@@ -63,7 +63,6 @@ This capstone project focuses on developing machine learning models for predicti
    ```bash
    pip install -r requirements.txt
    ```
-   (Note: Ensure requirements.txt is present in the root or relevant directories)
 
 3. **Set up Google Cloud credentials**
    - Obtain your service account JSON file from Google Cloud Console
@@ -92,9 +91,6 @@ BT4103-Capstone/
 └── README.md
 ```
 
-## License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 ## Acknowledgments
 
