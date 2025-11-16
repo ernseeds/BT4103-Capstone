@@ -243,7 +243,7 @@ def run_sold_check(df, prev_sgcm_df, prev_motor_df, prev_carro_df):
     print(f"[MAIN] To check → SGCM: {len(sgcm_df)}, CARRO: {len(carro_df)}, MOTORIST: {len(motor_df)}")
 
     total_sold = 0
-    total_sold += process_sgcarmart(sgcm_df, df, prev_sgcm_df, max_workers=2)
+    total_sold += process_sgcarmart(sgcm_df, df, prev_sgcm_df, max_workers=1)
     total_sold += process_carro(carro_df, df, prev_carro_df, max_workers=5)
     total_sold += process_motorist(motor_df, df, prev_motor_df, max_workers=5)
 

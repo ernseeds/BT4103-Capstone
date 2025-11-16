@@ -8,14 +8,14 @@ def get_coe_forecast(df_coe):
     df_coe_a = df_coe[df_coe['Vehicle_Class'] == 'Category A'].reset_index(drop=True)
     df_coe_b = df_coe[df_coe['Vehicle_Class'] == 'Category B'].reset_index(drop=True)
 
-    model_a = ARIMA(endog=df_coe_a['Premium'], order=(2,1,3)).fit()
-    model_b = ARIMA(endog=df_coe_b['Premium'], order=(1,1,2)).fit()
+    model_a = ARIMA(endog=df_coe_a['Premium'], order=(4,1,5)).fit()
+    model_b = ARIMA(endog=df_coe_b['Premium'], order=(0,1,5)).fit()
 
     # model_a
     model_a.get_forecast(steps=10).conf_int(alpha=0.05)
 
-    model_a = ARIMA(endog=df_coe_a['Premium'], order=(2,1,3)).fit()
-    model_b = ARIMA(endog=df_coe_b['Premium'], order=(1,1,2)).fit()
+    model_a = ARIMA(endog=df_coe_a['Premium'], order=(4,1,5)).fit()
+    model_b = ARIMA(endog=df_coe_b['Premium'], order=(0,1,5)).fit()
 
     def get_bidding_wednesday(month_date, bidding_no):
         """
